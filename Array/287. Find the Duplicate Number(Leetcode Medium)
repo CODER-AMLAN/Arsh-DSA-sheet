@@ -1,0 +1,16 @@
+https://leetcode.com/problems/find-the-duplicate-number/description/
+
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int[]arr = new int[100001];
+        for(int x:nums){
+            arr[x]++;
+        }
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]>1){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
